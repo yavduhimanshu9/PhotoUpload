@@ -17,7 +17,7 @@ public class FileStorageService {
 
     public FileStorageService() {
         // The location of the directory to store uploaded files
-        this.fileStorageLocation = Paths.get("src/main/resources/static/uploads").toAbsolutePath().normalize();
+        fileStorageLocation = Paths.get("uploads").toAbsolutePath().normalize();
         try {
             Files.createDirectories(this.fileStorageLocation);
         } catch (IOException ex) {
